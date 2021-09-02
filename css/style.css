@@ -229,6 +229,7 @@ img {
 .qualidade  img {
     margin: 0 auto
 }
+
 .qualidade_lista {
     padding-top: 20px;
 }
@@ -254,4 +255,18 @@ img {
         height: 3px;
         background: #000000;
         margin: 6px auto;
+}
+
+/* Quebra */
+
+.quebra {
+    width: 100%;
+    height: 220px;
+    background: url("../images/bg-footer.jpg") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 40px;
+}
+.quebra .quote-externo {
+    max-width: 400px;
 }
