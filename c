@@ -196,4 +196,4 @@ Date: Wed Sep 1 20:18:30 2021 -0300
 
     Inicialização do projeto
 
-a
+Retomada do projeto
