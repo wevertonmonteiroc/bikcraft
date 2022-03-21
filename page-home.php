@@ -1,7 +1,9 @@
 <?php
 // Template Name: Home
-get_header();
+	get_header();
 ?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<section class="introducao">
 			<div class="container">
 				<h1 data-anime="400" class="fadeInDown">Bicicletas Feitas a Mão</h1>
@@ -19,7 +21,7 @@ get_header();
 
 				<li class="grid-1-3">
 					<div class="produtos_icone">
-						<img src="img/produtos/passeio.svg" alt="Bikcraft Passeio">
+						<img src="/img/produtos/passeio.svg" alt="Bikcraft Passeio">
 					</div>
 					<h3>Passeio</h3>
 					<p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação.</p>
@@ -27,7 +29,7 @@ get_header();
 
 				<li class="grid-1-3">
 					<div class="produtos_icone">
-						<img src="img/produtos/esporte.svg" alt="Bikcraft Passeio">
+						<img src="/img/produtos/esporte.svg" alt="Bikcraft Passeio">
 					</div>
 					<h3>Esporte</h3>
 					<p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação.</p>
@@ -35,7 +37,7 @@ get_header();
 
 				<li class="grid-1-3">
 					<div class="produtos_icone">
-						<img src="img/produtos/retro.svg" alt="Bikcraft Passeio">
+						<img src="/img/produtos/retro.svg" alt="Bikcraft Passeio">
 					</div>
 					<h3>Retro</h3>
 					<p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação.</p>
@@ -88,5 +90,6 @@ get_header();
 				<a href="sobre.html" class="btn btn-preto">Sobre</a>
 			</div>
 		</section>
+<?php endwhile; else: endif; ?>		
 
 <?php get_footer(); ?>

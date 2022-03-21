@@ -16,25 +16,26 @@
 		<link rel="shortcut icon" href="favicon.ico">
 
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-		<script>document.documentElement.classList.add("js");</script>
+		<script src="js/libs/modernizr.custom.45655.js"></script>
 
-        <!-- Inicio do Wordpress Header -->
-        <?php wp_head(); ?>
-        <!-- Final do Wordpress Header -->
+		<!-- Inicio Wordpress Header -->
+		<?php wp_head(); ?>
+		<!-- Final Wordpress Header -->
 	</head>
 	<body>
 
 		<header class="header">
 			<div class="container">
-				<a href="index.html" class="grid-4">
-					<img src="img/bikcraft.svg" alt="Bikcraft">
+				<a href="../" class="grid-4">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/bikcraft.svg" alt="Bikcraft">
 				</a>
 				<nav class="grid-12 header_menu">
 					<ul>
+						<!-- colocar /bikcraft/ -->
 						<li><a href="/bikcraft/sobre/">Sobre</a></li>
-						<li><a href="/bikcraft/produtos/">Produtos</a></li>
-						<li><a href="/bikcraft/portfolio/">Portfólio</a></li>
-						<li><a href="/bikcraft/contato/">Contato</a></li>
+						<li><a href="/bikcraft/produtos">Produtos</a></li>
+						<li><a href="/bikcraft/portfolio">Portfolio</a></li>
+						<li><a href="/bikcraft/contato">Contato</a></li>
 					</ul>
 				</nav>
 			</div>
