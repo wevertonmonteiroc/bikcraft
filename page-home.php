@@ -6,12 +6,12 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<section class="introducao">
 			<div class="container">
-				<h1 data-anime="400" class="fadeInDown">Bicicletas Feitas a Mão</h1>
-				<blockquote data-anime="800" class="fadeInDown quote-externo">
-					<p>“não tenha nada em sua casa que você não considere útil ou acredita ser bonito”</p>
-					<cite>WILLIAM MORRIS</cite>
+				<h1><?php the_field('titulo_introducao'); ?></h1>
+				<blockquote class="quote-externo">
+					<p><?php the_field('quote_introducao'); ?></p>
+					<cite><?php the_field('citacao_introducao'); ?></cite>
 				</blockquote>
-				<a data-anime="1200" href="produtos.html" class="btn">Orçamento</a>
+				<a href="/bikcraft/produtos/" class="btn">Orçamento</a>
 			</div>
 		</section>
 		
@@ -46,8 +46,8 @@
 			</ul>
 
 			<div class="call">
-				<p>clique aqui e veja os detalhes dos produtos</p>
-				<a href="produtos.html" class="btn btn-preto">Produtos</a>
+				<p><?php the_field('chamada_produtos'); ?></p>
+				<a href="/bikcraft/produtos/" class="btn btn-preto">Produtos</a>
 			</div>
 
 		</section>
@@ -56,40 +56,15 @@
 		<section class="portfolio">
 			<div class="container">
 				<h2 class="subtitulo">Portfólio</h2>
-				<ul class="portfolio_lista">
-					<li class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro"></li>
-					<li class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
-					<li class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
-				</ul>
+				<?php include(TEMPLATEPATH . "/inc/clientes-portfolio.php"); ?>
 				<div class="call">
-					<p>conheça mais o nosso portfólio</p>
-					<a href="portfolio.html" class="btn">Portfólio</a>
+					<p><?php the_field('chamada_portfolio'); ?></p>
+					<a href="/bikcraft/portfolio/" class="btn">Portfólio</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="qualidade container">
-			<h2 class="subtitulo">Qualidade</h2>
-			<img src="img/bikcraft-qualidade.svg" alt="Bikcraft">
-			<ul class="qualidade_lista">
-				<li class="grid-1-3">
-					<h3>Durabilidade</h3>
-					<p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação renovação renovação</p>
-				</li>
-				<li class="grid-1-3">
-					<h3>Design</h3>
-					<p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação renovação renovação</p>
-				</li>
-				<li class="grid-1-3">
-					<h3>Sustentabilidade</h3>
-					<p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação renovação renovação</p>
-				</li>
-			</ul>
-			<div class="call">
-				<p>conheça mais a nossa história</p>
-				<a href="sobre.html" class="btn btn-preto">Sobre</a>
-			</div>
-		</section>
+		<?php include(TEMPLATEPATH . "/inc/qualidade.php"); ?>	
 <?php endwhile; else: endif; ?>		
 
 <?php get_footer(); ?>

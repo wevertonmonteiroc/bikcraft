@@ -32,7 +32,7 @@
 				<nav class="grid-12 header_menu">
 					<ul>
 						<!-- colocar /bikcraft/ -->
-						<li><a href="/bikcraft/sobre/">Sobre</a></li>
+						<li><a href="/bikcraft/sobre">Sobre</a></li>
 						<li><a href="/bikcraft/produtos">Produtos</a></li>
 						<li><a href="/bikcraft/portfolio">Portfolio</a></li>
 						<li><a href="/bikcraft/contato">Contato</a></li>
