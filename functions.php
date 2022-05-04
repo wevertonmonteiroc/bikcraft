@@ -14,7 +14,7 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 
 // Habilitar Menus
 add_theme_support('menus');
-/* A função my_custom_sizes serve para adiocinar tamanhos responsivos as imagens */
+/* A função my_custom_sizes serve para adiocinar tamanhos responsivos as imagens. */
 function my_custom_sizes() {
     add_image_size('large', 1400, 380, true);
     add_image_size('medium', 768, 380, true);
